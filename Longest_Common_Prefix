@@ -1,0 +1,17 @@
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        counter = ""
+
+        for i in range(len(strs[0])):
+            charac = strs[0][i]
+            for str in strs:
+                if(i >= len(str) or str[i] != charac):
+                    return counter 
+            
+            counter += charac
+                    
+    
+        return counter
+
+
+
